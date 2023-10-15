@@ -21,7 +21,10 @@ const App=()=>{
 
   return(
     <>
-    <h2>Fake Api</h2>
+    <div className='containerHeader'>
+    <img src='' className='imageIcon'></img>
+    <h1>E-Commerce</h1>
+    </div>
     <div className='container'>
       {fake.map((values)=>{
         return(
@@ -36,16 +39,7 @@ const App=()=>{
           </>
         )
       }
-      )}
-      <div className='box'>
-        <div className='content'>
-          <h5>title</h5>
-          <p>descrição do bglh xará</p>
-        </div>
-        <h1>image</h1>
-      </div>
-      
-       
+      )}       
     </div>
     </>
   )

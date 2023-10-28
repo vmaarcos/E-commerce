@@ -4,65 +4,89 @@
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
-.containerHeader{
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    width: 100%;
-}
-h1{
-    font-size:20pt;
-}
-h2{
-    color: aqua;
-    text-align: center;
-    font-size: 5rem;
-    margin: 0 0 2em;
-}
-h5{
-    text-align: center;
-}
-.container{
+.ContainerHeader{
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    height: 10vh;
+}.Logo{
+    display: flex;
+    font-size:20pt;
+}.imageIcon{
+    display: flex;
+    width: 5vh;
+    height: 5vh;
+}
+
+.ContainerMap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: rgb(255, 255, 255);
     flex-wrap: wrap;
+    width: 100%;
     gap: 15px;
 }
-.box{
+
+.ContainerBanner{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column-reverse;
+    width: 100%;
+    height: 70vh;
+}.Banner_1{
+    display: flex;
+    background-color: pink;
+    width: 100%;
+    height: 70vh;
+}
+
+.ContainerApi{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     background-color: rgb(255, 255, 255);
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.39);
-    width: 35%;
-    height: 80vh;
+    width: 50vh;
+    height: 50vh;
     border-radius: 15px;
-    gap: 10px;
-}.box:hover{
+    transition: 2s all;
+    transform: scale(1);
+    margin-top: 20px;
+}.ContainerApi:hover{
     animation: AnimCard 2s ease ;
     transform: scale(1.1);
-}@keyframes AnimCard{
-    0%{
-        transform:scale(1);
-    }
-    100%{
-        transform:scale(1.1);
-    }
+    transition: 1s all;
 }
-.content{
+.ImgItem{
     display: flex;
-}
-img{
-    display: flex;
-    width: 300px;
-    height: 300px;
-    object-fit: contain;
+    width: 70%;
+    height:  70%;
     flex-wrap: wrap;
 }
-.imageIcon{
-    width: 50px;
-    height: 50px;
-    object-fit: contain;
+.Text_1{
+    display: flex;
+    font-size: 12pt;
+}.Text_2{
+    display: flex;
+    font-size:9pt;
+}
+
+
+.ContainerNumbers{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+}.Number_1{
+    display: flex;
+}.Number_2{
+    display: flex;
+    color: rgb(255, 255, 0);
+}.Number_3{
+    display: flex;
+    color: rgb(119, 119, 119);
 }

@@ -1,3 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 *{
     margin: 0;
     padding: 0;
@@ -89,4 +94,9 @@
 }.Number_3{
     display: flex;
     color: rgb(119, 119, 119);
+}
+
+.Veja-mais {
+    display: flex;
+    margin-left: auto;
 }

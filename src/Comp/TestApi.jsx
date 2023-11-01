@@ -18,6 +18,7 @@ function ProductDetails() {
           <p>{product.description}</p>
           <img src={product.image} alt='img1'></img>
           <p>Preço: {product.price}</p>
+          
         </div>  
       ) : (
         <p>Carregando...</p>

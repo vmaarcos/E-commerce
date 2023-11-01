@@ -2,6 +2,9 @@ import React,{useState, useEffect} from 'react';
 import './App.css';
 import IconCar from './image/carrinho-de-compras.png';
 
+
+
+
 const App=()=>{
   const [fake, setFake]=useState([]);
   console.log(fake);
@@ -31,7 +34,7 @@ const App=()=>{
 
 
     <div className='ContainerBanner'>
-          <img src='' className='Banner_1'></img>
+         
           </div>
 
 

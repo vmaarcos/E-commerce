@@ -1,68 +1,30 @@
-import React,{useState, useEffect} from 'react';
-import './App.css';
-import IconCar from './image/carrinho-de-compras.png';
+import React from 'react';
+import './index.css'
+import Header from './Comp/Header/Header'
+import Banner from './Comp/Banner/Banner.component'
+import Feed from './Comp/Feed/Feed'
+import Ad from './Comp/Ad/Ad'
 
+function App()  {
+  let slides = [
+    "https://picsum.photos/1380/800?random=1",
+    "https://picsum.photos/1380/800?random=2",
+    "https://picsum.photos/1380/800?random=3",
+    "https://picsum.photos/1380/800?random=4",
+  ];
 
-
-
-const App=()=>{
-  const [fake, setFake]=useState([]);
-  console.log(fake);
-  useEffect(()=>{
-    fakeStore();
-  }, [])
-  
-
-    const fakeStore=async()=>{
-      const response=await fetch("https://fakestoreapi.com/products");
-     // console.log(response);
-      const jsonData=await response.json();
-      // console.log(jsonData);
-      setFake(jsonData);
-    }
-
-    //fakeStore();
-
-  return(
-    <>
-
-    <div className='ContainerHeader'>
-    <img src={IconCar} className='imageIcon'></img>
-    <h1 className='Logo'>E-Commerce</h1>
-    </div>
-
-
-
-    <div className='ContainerBanner'>
-         
-          </div>
-
-
-    <div className='ContainerMap'>
-      {fake.map((values)=>{
-        return(
-
-          <>
-
-        <div className='ContainerApi'>    
-        <img src={values.image} className='ImgItem'/>
-        <h5 className='Text_1'>{values.title}</h5>
-        <h6 className='Text_2'>{values.category}</h6>
-
-        <div className='ContainerNumbers'>
-        <h3 className='Number_1'>R${values.price}</h3>
-        <h3 className='Number_2'>{values.rating.rate}</h3>
-        <h3 className='Number_3'>{values.rating.count}</h3>
-          </div>
+  return (
+    <div className='flex flex-col'>
+    <Header />
+      <div className='flex flex-col gap-2'>
+        <div className='w=[60%] m-auto'>
+       <Banner slides={slides} />
         </div>
-          
-          </>
-        )
-      }
-      )}       
+    <Ad />
+    <Feed />
+      </div>
     </div>
-    </>
-  )
+    );
 }
 
 export default App;

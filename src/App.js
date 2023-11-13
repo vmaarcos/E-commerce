@@ -1,30 +1,33 @@
 import React from 'react';
-import './index.css'
-import Header from './Comp/Header/Header'
-import Banner from './Comp/Banner/Banner.component'
-import Feed from './Comp/Feed/Feed'
-import Ad from './Comp/Ad/Ad'
+// import react router dom
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
+//import pages
+import Home from './pages/Home';
+import ProductDetails from './pages/ProductDetails'
+import Finish from './pages/Finish'
+//import components
+import SidebarFinish from './components/SidebarFinish'
+import Sidebar from './components/Sidebar'
+import Header from './components/Header'
+import Footer from './components/Footer'
 
-function App()  {
-  let slides = [
-    "https://picsum.photos/1380/800?random=1",
-    "https://picsum.photos/1380/800?random=2",
-    "https://picsum.photos/1380/800?random=3",
-    "https://picsum.photos/1380/800?random=4",
-  ];
 
-  return (
-    <div className='flex flex-col'>
-    <Header />
-      <div className='flex flex-col gap-2'>
-        <div className='w=[60%] m-auto'>
-       <Banner slides={slides} />
-        </div>
-    <Ad />
-    <Feed />
-      </div>
-    </div>
-    );
-}
+const App = () => {
+  return <div className='overflow-hidden'>
+    <Router>
+      <Header />
+      <Routes>
+        <Route path='/' element={<Home />}/>
+        <Route path='/product/:id' element=
+        {<ProductDetails />} />
+        <Route path='/FinishBuy' element=
+        {<Finish />}/>
+      </Routes>
+      <SidebarFinish />
+      <Sidebar />
+      <Footer />
+    </Router>
+  </div>;
+};
 
 export default App;

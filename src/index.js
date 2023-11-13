@@ -1,24 +1,23 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import './index.css';
-import{ createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Home from './App';
-import FormBuy from './Routes/FormBuy';
-import Api from './Comp/Feed/Api'
+import App from './App';
+import ProductProvider from './contexts/ProductContext';
+import SidebarProvider from './contexts/SidebarContext';
+import CartProvider from './contexts/CartContext';
+import SidebarFinishProvider from './contexts/SidebarFinishContext';
 
-    const router = createBrowserRouter([
-        {
-            path: "/",
-            element: <Home />
-        },
-        {
-            path: "/product/:id",
-            element: <FormBuy />
-        },
-    ])
-
-ReactDOM.createRoot(document.getElementById("root")).render(
-<React.StrictMode>
-    <RouterProvider router={router}/>
-</React.StrictMode>
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+<SidebarFinishProvider>
+    <SidebarProvider>
+      <CartProvider>
+        <ProductProvider>
+        <React.StrictMode>
+                      <App />
+        </React.StrictMode>
+      </ProductProvider>
+    </CartProvider>
+  </SidebarProvider>
+</SidebarFinishProvider>
 );

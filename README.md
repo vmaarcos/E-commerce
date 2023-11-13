@@ -16,7 +16,7 @@ React Router: Facilita a navegação entre diferentes páginas da aplicação.
 Redux: Gerenciamento de estado para facilitar a comunicação entre componentes.
 Firebase: Utilizado para autenticação de usuários e armazenamento de dados.
 Como Rodar o Projeto
-Clone este repositório: git clone https://github.com/seu-usuario/nome-do-repositorio.git
+Clone este repositório: git clone https://github.com/vmaarcos/E-commerce
 Instale as dependências: npm install
 Execute o projeto: npm start
 Acesse a aplicação em http://localhost:3000

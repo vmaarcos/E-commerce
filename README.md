@@ -5,6 +5,12 @@ trabalho colaborativo.
 **Visão Geral** <br/>
 O e-commerce em React é uma aplicação web que permite aos usuários visualizar produtos, adicioná-los ao carrinho de compras e realizar transações de compra de forma fácil e intuitiva.
 
+![image](https://github.com/vmaarcos/E-commerce/assets/111014095/f5162b33-953c-4935-8ddb-e56e789f9026)
+![image](https://github.com/vmaarcos/E-commerce/assets/111014095/dec0c3c4-95a1-4728-9108-79d3d9266ab2)
+![image](https://github.com/vmaarcos/E-commerce/assets/111014095/158620ee-723d-41b0-9f29-e6c011c666a8)
+![image](https://github.com/vmaarcos/E-commerce/assets/111014095/992f7c58-e27e-4d72-81d8-3b0f8c8eead5)
+
+
 **Funcionalidades Principais** <br/>
 Catálogo de Produtos: Explore uma ampla variedade de produtos disponíveis para compra.
 Carrinho de Compras: Adicione produtos ao carrinho e visualize o resumo das suas escolhas.
